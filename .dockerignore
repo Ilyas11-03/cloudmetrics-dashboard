@@ -1,0 +1,25 @@
+# Dépendances (seront réinstallées dans le conteneur)
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Cache de build Next.js (très lourd et inutile pour la build Docker)
+.next
+out
+
+# Variables d'environnement locales (sécurité)
+.env
+.env.local
+.env.*.local
+
+# Git et IDE
+.git
+.gitignore
+.vscode
+.idea
+*.swp
+.DS_Store
+
+# Fichiers de test et docs
+README.md
+*.md

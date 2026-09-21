@@ -1,0 +1,18 @@
+services:
+  mysql-db:
+    image: mariadb:10.6 # Plus léger et très stable
+    container_name: cloud_monitoring_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_ROOT_HOST: '%'       # <--- C'est la ligne magique qui règle le problème !
+      MYSQL_DATABASE: monitoring_db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123456
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:

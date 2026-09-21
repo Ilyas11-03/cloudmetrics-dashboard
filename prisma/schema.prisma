@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+  // On force Prisma à télécharger le moteur compatible avec Debian 12 (OpenSSL 3.0)
+  binaryTargets = ["native", "debian-openssl-1.1.x", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Server {
+  id         Int      @id @default(autoincrement())
+  name       String   @db.VarChar(100)
+  ip_address String?  @db.VarChar(45)
+  status     String   @default("active") @db.VarChar(20)
+  created_at DateTime @default(now())
+  metrics    Metric[]
+  alerts     Alert[]
+
+  @@map("servers")
+}
+
+model Metric {
+  id        BigInt   @id @default(autoincrement())
+  server_id Int
+  cpu_usage Float
+  ram_usage Float
+  disk_io   Float
+  timestamp DateTime @default(now())
+  server    Server   @relation(fields: [server_id], references: [id], onDelete: Cascade)
+
+  @@map("metrics")
+}
+
+model Alert {
+  id          Int      @id @default(autoincrement())
+  server_id   Int
+  message     String   @db.Text
+  severity    String   @db.VarChar(20)
+  is_resolved Boolean  @default(false)
+  created_at  DateTime @default(now())
+  server      Server   @relation(fields: [server_id], references: [id])
+
+  @@map("alerts")
+}
