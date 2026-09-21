@@ -18,7 +18,6 @@ Plateforme SaaS de monitoring d'infrastructure en temps réel, développée avec
 - **Authentification** : Clerk
 - **Visualisation** : Recharts
 
-<<<<<<< HEAD
 ## Utilisation avec Docker
 
 L'image est disponible publiquement sur Docker Hub. Pour lancer le projet localement :
@@ -29,11 +28,6 @@ L'image est disponible publiquement sur Docker Hub. Pour lancer le projet locale
 
 ```bash
 docker run -p 3000:3000 --env-file .env ton_username/cloudmetrics-dashboard:latest
-=======
-![Status](https://img.shields.io/badge/Status-En_développement-yellow)
-![Next.js](https://img.shields.io/badge/Next.js-14-black)
-![Azure](https://img.shields.io/badge/Azure-MySQL-blue)
->>>>>>> abc886f6ffca820b3c241509eb8ff8f141ce49a5
 
 ## Installation
 

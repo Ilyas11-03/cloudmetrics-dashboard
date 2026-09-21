@@ -77,7 +77,7 @@ export default function HomePage() {
           <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"></div>
         </div>
       </section>
-
+      
       {/* Features Section */}
       <section className="py-20 bg-gray-900 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
