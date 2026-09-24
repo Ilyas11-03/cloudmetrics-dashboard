@@ -1,6 +1,7 @@
 "use client";
 
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import type { Metric } from '@prisma/client';
 
 const formatTime = (dateString: string) => {
   const date = new Date(dateString);
@@ -11,7 +12,7 @@ const formatTime = (dateString: string) => {
   });
 };
 
-export default function MetricsChart({ data }: { data: any[] }) {
+export default function MetricsChart({ data }: { data: Metric[] }) {
   // Debug : afficher les données dans la console
   console.log("📊 Données reçues dans le graphique:", data.length, "mesures");
 

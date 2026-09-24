@@ -15,7 +15,7 @@ export default function HomePage() {
     </SignInButton>
     <SignUpButton mode="modal">
       <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-        S'inscrire
+        S&apos;inscrire
       </button>
     </SignUpButton>
   </Show>
@@ -42,7 +42,7 @@ export default function HomePage() {
           </div>
           
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
-            Surveillance d'Infrastructure <br />
+            Surveillance d&apos;Infrastructure <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               en Temps Réel
             </span>

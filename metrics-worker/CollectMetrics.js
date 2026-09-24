@@ -1,4 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { app } = require('@azure/functions');
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { PrismaClient } = require('@prisma/client');
 
 // Initialisation de Prisma

@@ -4,7 +4,7 @@ import MetricsChart from '@/components/MetricsChart';
 import Link from 'next/link';
 import { Metric } from '@prisma/client';
 
-// 🚀 AJOUT CRUCIAL : Empêche Next.js de pré-générer cette page au moment du build Docker
+// AJOUT CRUCIAL : Empêche Next.js de pré-générer cette page au moment du build Docker
 export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
@@ -34,7 +34,7 @@ export default async function DashboardPage() {
               href="/" 
               className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >
-              ← Retour à l'accueil
+              ← Retour à l&apos;accueil
             </Link>
           </div>
         </div>

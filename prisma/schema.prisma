@@ -1,10 +1,10 @@
 generator client {
   provider = "prisma-client-js"
   // On force Prisma à télécharger le moteur compatible avec Debian 12 (OpenSSL 3.0)
-  binaryTargets = ["native", "debian-openssl-1.1.x", "debian-openssl-3.0.x"]
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
 
-datasource db {
+datasource db { 
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
